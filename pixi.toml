@@ -8,7 +8,7 @@ version = "0.1.0"
 
 [tasks]
 run = "python quickBlack.py $PIXI_PROJECT_ROOT"
-build = { cmd = ["python", "-m", "nuitka", "--show-progress", "--lto=no", "--include-package-data=fake_useragent", "--onefile", "--standalone", "--output-filename=QuickBlackList", "quickBlack.py"] }
+build = { cmd = ["python", "-m", "nuitka", "--show-progress", "--lto=no", "--include-package-data=fake_useragent", "--onefile", "--standalone", "--output-filename=BilibiliAutoBlacklist", "quickBlack.py"] }
 
 
 [dependencies]
