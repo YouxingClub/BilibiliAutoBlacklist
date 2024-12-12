@@ -1,0 +1,25 @@
+[project]
+authors = ["AuraElicase <AuraElicase@outlook.com>"]
+channels = ["conda-forge"]
+description = "bilibili auto add black"
+name = "QuickBlackList"
+platforms = ["win-64"]
+version = "0.1.0"
+
+[tasks]
+run = "python quickBlack.py $PIXI_PROJECT_ROOT"
+build = { cmd = ["python", "-m", "nuitka", "--show-progress", "--lto=no", "--include-package-data=fake_useragent", "--onefile", "--standalone", "--output-filename=QuickBlackList", "quickBlack.py"] }
+
+
+[dependencies]
+python = "*"
+
+
+[pypi-dependencies]
+xlrd = "==1.2.0"
+requests = ">=2.32.3,<3"
+qrcode = ">=8.0,<9"
+fake_useragent = "*"
+pillow = "*"
+nuitka = "*"
+setuptools = "*"
